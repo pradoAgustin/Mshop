@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">mlShop</string>
+    <string name="searchhint">Search for products</string>
+    <string name="freeShippingLabel">tenes envio gratis con este producto!</string>
+    <string name="spinnerQtyLabel">Cantidad</string>
+    <string name="pickUpInStore">Retira en nuestros puntos</string>
+    <string name="PickUpInStoreUnavailable">Ponete de acuerdo con el vendedor para el retiro</string>
+    <string name="lastItem">Apurate Queda solo 1</string>
+    <string name="MoreProductsOfTheseSeller">Mas de este vendedor</string>
+    <string name="moreAboutTheseSeller">Acerca de mi vendedor</string>
+    <string name="sellerStatusLabel">Estado de vendedor</string>
+    <string name="discountLabel">%1$s OFF!</string>
+    <string name="reviewsQtyLabel">%1$s opiniones</string>
+    <string name="installlmentLabel">%1$s cuotas sin interés</string>
+    <string name="lowestPrice">Precio Mas Bajo</string>
+    <string name="highgestPice">Precio Mas Alto</string>
+</resources>

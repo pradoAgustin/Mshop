@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content">
+
+        <ImageView android:id="@+id/detailThumbnail"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/detailThumbnailSize"
+                   android:layout_marginEnd="16dp" android:layout_marginStart="16dp"
+                   app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView android:id="@+id/productTitle"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="24dp"
+                  android:textSize="@dimen/text16sp"
+                  app:layout_constraintEnd_toEndOf="@+id/detailThumbnail"
+                  app:layout_constraintStart_toStartOf="@+id/detailThumbnail"
+                  app:layout_constraintTop_toBottomOf="@+id/detailThumbnail"
+                  tools:text="linterna super rabiosa con un texto muy largo de prueba"/>
+
+        <TextView android:id="@+id/productCurrency"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="16dp"
+                  app:layout_constraintStart_toStartOf="@+id/originalPriceCurrency"
+                  app:layout_constraintTop_toBottomOf="@+id/originalPriceCurrency"
+                  tools:text="USD"/>
+
+        <TextView android:id="@+id/originalPriceCurrency"
+                  style="@style/titleStylePriceDown12sp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="16dp"
+                  android:visibility="gone"
+                  app:layout_constraintStart_toStartOf="@+id/productTitle"
+                  app:layout_constraintTop_toBottomOf="@+id/productTitle"
+                  tools:text="precio anterior"
+                  tools:visibility="visible"/>
+
+        <TextView android:id="@+id/productPrice"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:textSize="@dimen/text16sp"
+                  app:layout_constraintBottom_toBottomOf="@+id/productCurrency"
+                  app:layout_constraintStart_toEndOf="@+id/productCurrency"
+                  app:layout_constraintTop_toTopOf="@+id/productCurrency"
+                  tools:text="12.500"/>
+
+        <TextView android:id="@+id/productDiscount"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/discountGreenColor" android:textSize="@dimen/text12sp"
+                  android:visibility="gone"
+                  app:layout_constraintBottom_toBottomOf="@+id/productRating"
+                  app:layout_constraintStart_toStartOf="@+id/productCurrency"
+                  app:layout_constraintTop_toTopOf="@+id/productRating" tools:text="50%OFF"
+                  tools:visibility="visible"/>
+
+        <TextView android:id="@+id/productRating"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="8dp"
+                  android:textSize="@dimen/text12sp"
+                  app:layout_constraintStart_toEndOf="@+id/productDiscount"
+                  app:layout_constraintTop_toBottomOf="@+id/productCurrency"
+                  tools:text="4.5 puntos"/>
+
+        <TextView android:id="@+id/installmentsLabel"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="16dp"
+                  android:textSize="@dimen/text12sp"
+                  app:layout_constraintEnd_toEndOf="@+id/productTitle"
+                  app:layout_constraintStart_toStartOf="@+id/productTitle"
+                  app:layout_constraintTop_toBottomOf="@+id/sellerView"
+                  tools:text="Paga hasta con 12 cuotas sin interes"/>
+
+        <TextView android:id="@+id/freeShipping"
+                  style="@style/titleStyleGreenLabel12sp"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="16dp"
+                  android:text="@string/freeShippingLabel"
+                  android:textSize="@dimen/text12sp"
+                  app:layout_constraintEnd_toEndOf="@+id/installmentsLabel"
+                  app:layout_constraintStart_toStartOf="@+id/installmentsLabel"
+                  app:layout_constraintTop_toBottomOf="@+id/installmentsLabel"/>
+
+        <TextView android:id="@+id/originalPriceWithoutdiscount"
+                  style="@style/titleStylePriceDown12sp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  app:layout_constraintBottom_toBottomOf="@+id/originalPriceCurrency"
+                  app:layout_constraintStart_toEndOf="@+id/originalPriceCurrency"
+                  app:layout_constraintTop_toTopOf="@+id/originalPriceCurrency" tools:text="-300000"/>
+
+        <TextView android:id="@+id/spinnerQtyLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginTop="16dp"
+                  android:text="@string/spinnerQtyLabel"
+                  android:textSize="@dimen/text12sp"
+                  app:layout_constraintBottom_toTopOf="@+id/spinnerQty"
+                  app:layout_constraintStart_toStartOf="@+id/freeShipping"
+                  app:layout_constraintTop_toBottomOf="@+id/freeShipping"/>
+
+        <android.support.v7.widget.AppCompatSpinner android:id="@+id/spinnerQty"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginBottom="16dp"
+                                                    android:layout_marginEnd="8dp"
+                                                    android:layout_marginTop="32dp"
+                                                    app:layout_constraintBottom_toBottomOf="parent"
+                                                    app:layout_constraintEnd_toEndOf="@+id/freeShipping"
+                                                    app:layout_constraintStart_toStartOf="@+id/freeShipping"
+                                                    app:layout_constraintTop_toBottomOf="@+id/freeShipping"/>
+
+        <com.agustin.mlshop.customView.SellerView android:id="@+id/sellerView"
+                                                  android:layout_width="0dp"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_marginTop="8dp"
+                                                  app:layout_constraintEnd_toEndOf="@+id/productTitle"
+                                                  app:layout_constraintStart_toStartOf="@+id/productDiscount"
+                                                  app:layout_constraintTop_toBottomOf="@+id/productRating"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

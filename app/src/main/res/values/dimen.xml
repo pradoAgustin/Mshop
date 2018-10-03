@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text16sp">16sp</dimen>
+    <dimen name="text12sp">12sp</dimen>
+    <dimen name="product_thumbnail_picture">40dp</dimen>
+</resources>

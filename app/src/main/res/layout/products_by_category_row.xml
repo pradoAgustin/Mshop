@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    xmlns:tools="http://schemas.android.com/tools"
+                                    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content">
+
+        <ImageView android:id="@+id/productThumbnail"
+                   android:layout_width="@dimen/product_thumbnail_picture"
+                   android:layout_height="@dimen/product_thumbnail_picture"
+                   android:layout_marginStart="8dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView android:id="@+id/productByCategoryTitle"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="8dp"
+                  android:singleLine="false"
+                  android:textAlignment="viewStart" android:textSize="@dimen/text12sp"
+                  app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                  app:layout_constraintStart_toEndOf="@+id/productThumbnail"
+                  app:layout_constraintTop_toTopOf="@+id/productThumbnail"
+                  tools:text="LAVA ROPAS DREAM"/>
+
+        <TextView android:id="@+id/productbyCategoryCurrency"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:textSize="@dimen/text12sp"
+                  app:layout_constraintStart_toEndOf="@+id/productByCategoryTitle"
+                  app:layout_constraintTop_toTopOf="@+id/productByCategoryTitle" tools:text="usd"/>
+
+        <TextView android:id="@+id/productByCategoryPrice"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginTop="4dp"
+                  android:textSize="@dimen/text12sp"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="@+id/productbyCategoryCurrency"
+                  app:layout_constraintStart_toStartOf="@+id/productbyCategoryCurrency"
+                  app:layout_constraintTop_toBottomOf="@+id/productbyCategoryCurrency"
+                  tools:text="2300"/>
+
+        <android.support.constraint.Guideline android:id="@+id/guideline4" android:layout_width="0dp"
+                                              android:layout_height="wrap_content"
+                                              android:orientation="vertical"
+                                              app:layout_constraintEnd_toEndOf="parent"
+                                              app:layout_constraintGuide_begin="270dp"/>
+
+        <TextView android:id="@+id/hotItem"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"
+                  android:layout_marginTop="8dp"
+                  android:text="@string/lastItem"
+                  android:textColor="@color/blueHighLight"
+                  android:textSize="@dimen/text12sp"
+                  android:visibility="gone"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                  app:layout_constraintStart_toStartOf="@+id/productByCategoryTitle"
+                  app:layout_constraintTop_toBottomOf="@+id/productByCategoryTitle" tools:visibility="visible"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

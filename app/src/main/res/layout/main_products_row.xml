@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:tools="http://schemas.android.com/tools"
+                                    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView android:id="@+id/mainProductRowTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="12dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginTop="12dp"
+              android:textSize="@dimen/text16sp"
+              tools:text="muebles tttttttttttttttttttttttttttttttttttt6666666666t"/>
+</android.support.v7.widget.CardView>
