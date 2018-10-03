@@ -30,8 +30,9 @@
         <TextView android:id="@+id/productbyCategoryCurrency"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="8dp"
                   android:textSize="@dimen/text12sp"
+                  app:layout_constraintEnd_toEndOf="parent"
                   app:layout_constraintStart_toEndOf="@+id/productByCategoryTitle"
                   app:layout_constraintTop_toTopOf="@+id/productByCategoryTitle" tools:text="usd"/>
 
@@ -51,7 +52,7 @@
                                               android:layout_height="wrap_content"
                                               android:orientation="vertical"
                                               app:layout_constraintEnd_toEndOf="parent"
-                                              app:layout_constraintGuide_begin="270dp"/>
+                                              app:layout_constraintGuide_begin="228dp"/>
 
         <TextView android:id="@+id/hotItem"
                   android:layout_width="0dp"

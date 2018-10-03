@@ -10,7 +10,7 @@ object GlideApi {
                 .load(url)
                 .apply(RequestOptions()
                         .centerCrop()
-                        .placeholder(R.drawable.ic_launcher_foreground))
+                        .placeholder(R.drawable.ic_launcher_background))
                 .into(view)
     }
 }
